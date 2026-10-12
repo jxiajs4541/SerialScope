@@ -1,0 +1,44 @@
+# ===== Visual Studio =====
+.vs/
+Debug/
+Release/
+x64/
+Win32/
+build-*/
+out/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.aps
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.obj
+*.tlog
+*.log
+*.lastbuildstate
+*.res
+
+# ===== Qt =====
+# 生成物（由 uic / moc / rcc 产出，不入库）
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.pro.user
+*.qmlc
+*.jsc
+.qmake.stash
+Makefile*
+QtMsBuild/
+
+# ===== 运行期产物 =====
+config.ini
+log_*.txt
+
+# ===== 临时备份 =====
+_backup_*/
