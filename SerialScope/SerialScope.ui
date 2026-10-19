@@ -9,278 +9,348 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>663</width>
-    <height>557</height>
+    <width>733</width>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>串口调试助手</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="widget_4" native="true">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>50</y>
-      <width>561</width>
-      <height>183</height>
-     </rect>
-    </property>
-    <widget class="QCheckBox" name="chkSendHex">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>120</y>
-       <width>79</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>HEX 发送</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="chkHexDisplay">
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>120</y>
-       <width>79</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>HEX 显示</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="widget" native="true">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>20</y>
-       <width>171</width>
-       <height>147</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QComboBox" name="cmbPortName"/>
-      </item>
-      <item>
-       <widget class="QComboBox" name="cmbBaud"/>
-      </item>
-      <item>
-       <widget class="QComboBox" name="cmbStopBits"/>
-      </item>
-      <item>
-       <widget class="QComboBox" name="cmbDataBits"/>
-      </item>
-      <item>
-       <widget class="QComboBox" name="cmbParity"/>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="widget_9" native="true">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>71</width>
-       <height>122</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>串口名</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string>波特率</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_11">
-        <property name="text">
-         <string>停止位</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_12">
-        <property name="text">
-         <string>数据位</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_13">
-        <property name="text">
-         <string>校验位</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QCheckBox" name="chkLogEnable">
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>150</y>
-       <width>79</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>记录日志</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="chkAutoWrap">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>150</y>
-       <width>79</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>自动换行</string>
-     </property>
-     <property name="checkable">
-      <bool>true</bool>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="chkScrollBottom">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>120</y>
-       <width>79</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>滚动到底部</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnOpenClose">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>30</y>
-       <width>108</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>打开串口</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnRefresh">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>30</y>
-       <width>101</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>刷新串口</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnQueryDb">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>70</y>
-       <width>108</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>查询数据</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="widget_3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>240</y>
-      <width>576</width>
-      <height>275</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_10">
-     <item>
-      <widget class="QGroupBox" name="groupBox_7">
-       <property name="title">
-        <string>接收</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabSerial_2">
+       <attribute name="title">
+        <string>串口</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QPlainTextEdit" name="pteReceive">
-          <property name="plainText">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btnClearReceive">
-          <property name="text">
-           <string>清除接收</string>
-          </property>
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QWidget" name="widget_9" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="label_10">
+                     <property name="text">
+                      <string>串口名</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>波特率</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_11">
+                     <property name="text">
+                      <string>停止位</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_12">
+                     <property name="text">
+                      <string>数据位</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_13">
+                     <property name="text">
+                      <string>校验位</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <item>
+                    <widget class="QComboBox" name="cmbPortName"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cmbBaud"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cmbStopBits"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cmbDataBits"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cmbParity"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="btnSerialOpenClose">
+                  <property name="text">
+                   <string>打开串口</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="btnSerialRefresh">
+                  <property name="text">
+                   <string>刷新串口</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="btnSerialQueryDb">
+                  <property name="text">
+                   <string>查询数据</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QCheckBox" name="chkScrollBottom">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="text">
+                   <string>滚动到底部</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="chkHexDisplay">
+                  <property name="text">
+                   <string>HEX 显示</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QCheckBox" name="chkSendHex">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="text">
+                   <string>HEX 发送</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QCheckBox" name="chkAutoWrap">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="text">
+                   <string>自动换行</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QCheckBox" name="chkLogEnable">
+                  <property name="text">
+                   <string>记录日志</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QGroupBox" name="groupBox_7">
+                <property name="title">
+                 <string>接收</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7">
+                 <item>
+                  <widget class="QPlainTextEdit" name="pteReceive">
+                   <property name="plainText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnSerialClearReceive">
+                   <property name="text">
+                    <string>清除接收</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_8">
+                <property name="title">
+                 <string>发送</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QPlainTextEdit" name="pteSend">
+                   <property name="plainText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnSerialSend">
+                   <property name="text">
+                    <string>点击发送</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
       </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="groupBox_8">
-       <property name="title">
-        <string>发送</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
+      <widget class="QWidget" name="tabTcp_2">
+       <attribute name="title">
+        <string>TCP</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
-         <widget class="QPlainTextEdit" name="pteSend">
-          <property name="plainText">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="btnSend">
-          <property name="text">
-           <string>点击发送</string>
-          </property>
+         <widget class="QWidget" name="widget_5" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QWidget" name="widget_6" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>角色</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="cmbTcpRole"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>地址</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leTcpHost"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>端口</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="leTcpPort"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnTcpStart">
+                <property name="text">
+                 <string>启动</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnTcpStop">
+                <property name="text">
+                 <string>停止</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>已连接的对端</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QListWidget" name="lstPeers"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>接收</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QPlainTextEdit" name="pteTcpReceive"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLineEdit" name="leTcpSend"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnTcpSend">
+                <property name="text">
+                 <string>发送</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnTcpClear">
+                <property name="text">
+                 <string>清空</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
       </widget>
-     </item>
-    </layout>
-   </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>

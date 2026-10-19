@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_SerialScope.h"
 #include "SerialWorker.h"  
+#include "TcpWorker.h"
 
 class QThread;
 class QLabel;
@@ -16,39 +17,43 @@ public:
     ~SerialScope();
 
 signals:
-    // 打开串口请求
-    void openPortRequested(const SerialConfig& config);
-    // 关闭串口请求
-    void closePortRequested();
-    // 发送数据请求
-    void sendDataRequested(const QByteArray& data);
-    // 记录日志请求
+    // Serial
+    void openSerialRequested(const SerialConfig& config);
+    void closeSerialRequested();
+    void sendSerialDataRequested(const QByteArray& data);
     void setLogFileRequested(const QString &path);
 
+    // Tcp
+    void startTcpRequested(const TcpConfig& config);
+    void stopTcpRequested();
+    void sendTcpDataRequested(const QByteArray& data);
 private slots:
-    // 刷新串口
-    void on_btnRefresh_clicked();
-    // 打开/关闭串口
-    void on_btnOpenClose_clicked();
-    // 清除接收
-    void on_btnClearReceive_clicked();
-    // 点击发送
-    void on_btnSend_clicked();
-    // 日志记录
+    // Serial
+    void on_btnSerialRefresh_clicked();
+    void on_btnSerialOpenClose_clicked();
+    void on_btnSerialClearReceive_clicked();
+    void on_btnSerialSend_clicked();
     void on_chkLogEnable_toggled(bool checked);
-    // 自动换行
     void on_chkAutoWrap_toggled(bool checked);
-    // 数据查询
-    void on_btnQueryDb_clicked();
-
-    // 串口已打开
+    void on_btnSerialQueryDb_clicked();
     void onSerialOpened();
-    // 串口已关闭
     void onSerialClosed();
-    // 接收消息
     void onSerialDataReceived(const QByteArray& data);
-    // 收发计数变化
     void onCountsChanged(qint64 rxCount, qint64 txCount);
+
+    // Tcp
+    void on_btnTcpStart_clicked();
+    void on_btnTcpStop_clicked();
+    void on_btnTcpSend_clicked();
+    void on_btnTcpClear_clicked();
+
+    void onTcpStarted(const QString& info);
+    void onTcpStopped();
+    void onTcpStartFailed(const QString& error);
+    void onTcpDataReceived(const QByteArray& data);
+    void onTcpDataSendFailed(const QString& error);
+    void onPeerConnected(const QString& peerInfo);
+    void onPeerDisconnected(const QString& peerInfo);
 
 protected:
     void closeEvent(QCloseEvent* event) override;
@@ -56,20 +61,22 @@ protected:
 private:
 
     Ui::SerialScopeClass ui;
-
-    // 初始化
-    void initComboBoxes();        // 填充波特率/数据位/校验位/停止位下拉框
-    void setupSerialThread();     // 创建 worker、线程、建立全部连接
-
-    // 加载配置
-    void loadConfig();
-
-    // 保存配置
-    void saveConfig();
-
+    // Serial
     SerialWorker* m_serialWorker = nullptr;
     QThread* m_serialThread = nullptr;
     QLabel* m_lblCounts = nullptr;
     bool m_isOpen = false;
+    void initSerial();
+    void setupSerialThread();   
+    void loadSerialConfig();
+    void saveSerialConfig();
+
+    // Tcp
+    TcpWorker* m_tcpWorker = nullptr;
+    QThread* m_tcpThread = nullptr;
+    void initTcp();
+    void updateTcpRoleUi();
+    void setupTcpThread();
+    
 
 };

@@ -37,12 +37,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>Qt6.7.3</QtInstall>
-    <QtModules>core;gui;widgets;serialport;sql</QtModules>
+    <QtModules>core;gui;network;widgets;serialport;sql</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>Qt6.7.3</QtInstall>
-    <QtModules>core;gui;widgets;serialport;sql</QtModules>
+    <QtModules>core;gui;network;widgets;serialport;sql</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -95,6 +95,7 @@
     <ClCompile Include="DbConfig.cpp" />
     <ClCompile Include="QueryDialog.cpp" />
     <ClCompile Include="SerialWorker.cpp" />
+    <ClCompile Include="TcpWorker.cpp" />
     <QtRcc Include="SerialScope.qrc" />
     <QtUic Include="SerialScope.ui" />
     <QtMoc Include="SerialScope.h" />
@@ -107,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DbConfig.h" />
+    <QtMoc Include="TcpWorker.h" />
     <QtMoc Include="QueryDialog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

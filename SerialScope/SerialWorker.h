@@ -1,8 +1,10 @@
 ﻿#pragma once
 
+#include "TcpWorker.h"
 #include <QObject>
 #include <QSerialPort>
 #include <QSqlDatabase>
+
 
 struct SerialConfig {
 	QString portName;
@@ -31,27 +33,22 @@ signals:
 	void countsChanged(qint64 rxCount, qint64 txCount);
 	void dbError(const QString& msg);
 
+	
 public slots:
-	//打开串口
 	void openSerialPort(const SerialConfig& config);
-	//关闭串口
 	void closeSerialPort();
-	//发送数据
 	void sendData(const QByteArray&data);
-	// 接路径，空=停
 	void setLogFile(const QString& path);
 
 private:
 	QSerialPort* m_serialPort = nullptr;
-	QString m_logPath;	//日志保存地址
-	qint64 m_rxCount = 0;	// 已收字节                   
-	qint64 m_txCount = 0;	// 已发字节
+	QString m_logPath;
+	qint64 m_rxCount = 0;
+	qint64 m_txCount = 0;	
 	QSqlDatabase m_db;
 	bool m_dbOk = false;
 	bool openDatabase();
-	// 写日志
 	void appendLog(const QString& direction, const QString& text);
-	// 入库
 	void insertRecord(const QString& direction, const QString& text, int byteCount);
 	void logEvent(const QString& direction, const QString& text);
 	void logData(const QString& direction, const QString& text, int size);

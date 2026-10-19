@@ -49,12 +49,18 @@
     <ClCompile Include="DbConfig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TcpWorker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="SerialWorker.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QueryDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TcpWorker.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
